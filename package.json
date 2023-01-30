@@ -1,0 +1,22 @@
+{
+  "name": "build-history",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/medic/build-history.git"
+  },
+  "private": true,
+  "license": "AGPL-3.0-only",
+  "bugs": {
+    "url": "https://github.com/medic/build-history/issues"
+  },
+  "homepage": "https://github.com/medic/build-history#readme",
+  "dependencies": {
+    "d3": "^7.8.2"
+  }
+}
