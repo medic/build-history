@@ -13,9 +13,6 @@ jobs:
     runs-on: ubuntu-22.04
 
     steps:
+    - uses: actions/checkout@v3
     - name: Append file size
-      uses: DamianReeves/write-file-action@master
-      with:
-        path: ${{ env.home}}/data/build-history/filesize.csv
-        contents: ${{ stat -c "%s" index.html }}
-        write-mode: append
+      run: echo "`date +%s`,`stat -c "%s" ${{ env.home }}/index.html`" >> ${{ env.home }}/data/build-history/filesize.csv
