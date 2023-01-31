@@ -1,0 +1,21 @@
+name: Capture build history and write to csv
+
+on:
+  push:
+    branches:
+      - main
+    paths-ignore:
+      - 'data/**' # don't run if the data changes as that would cause an infinite loop
+
+jobs:
+  build:
+    name: Build for Node version ${{ matrix.node-version }}
+    runs-on: ubuntu-22.04
+
+    steps:
+    - name: Append file size
+    - uses: DamianReeves/write-file-action@master
+    - with:
+      - path: ${{ env.home}}/data/build-history/filesize.csv
+      - contents: {{ stat -c "%s" index.html }}
+      - write-mode: append
