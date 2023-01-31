@@ -17,5 +17,5 @@ jobs:
       uses: DamianReeves/write-file-action@master
       with:
         path: ${{ env.home}}/data/build-history/filesize.csv
-        contents: {{ stat -c "%s" index.html }}
+        contents: ${{ stat -c "%s" index.html }}
         write-mode: append
