@@ -9,7 +9,7 @@ on:
 
 jobs:
   build:
-    name: Build for Node version ${{ matrix.node-version }}
+    name: Append build history
     runs-on: ubuntu-22.04
 
     steps:
@@ -22,4 +22,5 @@ jobs:
     - name: Commit & Push build history
       uses: actions-js/push@master
       with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
         directory: 'build-history'
