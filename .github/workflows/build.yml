@@ -18,7 +18,7 @@ jobs:
         repository: 'medic/build-history'
         path: 'build-history'
     - name: Append file size
-      run: echo "`date +%s`,`stat -c "%s" ./index.html`" >> ./build-history/data/build-history/filesize.csv
+      run: echo "`date +%s`,`stat -c "%s" ./build-history/index.html`" >> ./build-history/data/build-history/filesize.csv
     - name: Commit & Push build history
       uses: actions-js/push@master
       with:
