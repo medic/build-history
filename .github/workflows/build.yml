@@ -15,4 +15,4 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Append file size
-      run: echo "`date +%s`,`stat -c "%s" ${{ env.home }}/index.html`" >> ${{ env.home }}/data/build-history/filesize.csv
+      run: echo "`date +%s`,`stat -c "%s" ./index.html`" >> ./data/build-history/filesize.csv
