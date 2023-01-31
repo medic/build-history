@@ -14,8 +14,8 @@ jobs:
 
     steps:
     - name: Append file size
-    - uses: DamianReeves/write-file-action@master
-    - with:
-      - path: ${{ env.home}}/data/build-history/filesize.csv
-      - contents: {{ stat -c "%s" index.html }}
-      - write-mode: append
+      uses: DamianReeves/write-file-action@master
+      with:
+        path: ${{ env.home}}/data/build-history/filesize.csv
+        contents: {{ stat -c "%s" index.html }}
+        write-mode: append
