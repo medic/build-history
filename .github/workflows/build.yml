@@ -28,5 +28,7 @@ jobs:
       uses: actions-js/push@master
       with:
         github_token: ${{ secrets.BUILD_HISTORY_DATA_PUSH_TOKEN }}
+        author_email: 'dev@medicmobile.org'
+        author_name: 'medic-ci'
         directory: 'build-history-data'
         repository: 'medic/build-history-data'
