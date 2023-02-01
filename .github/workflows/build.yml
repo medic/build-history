@@ -4,8 +4,6 @@ on:
   push:
     branches:
       - main
-    paths-ignore:
-      - 'data/**' # don't run if the data changes as that would cause an infinite loop
 
 jobs:
   build:
@@ -13,14 +11,20 @@ jobs:
     runs-on: ubuntu-22.04
 
     steps:
+    # checkout build-history repo
     - uses: actions/checkout@v3
       with:
         repository: 'medic/build-history'
         path: 'build-history'
+    # checkout build-history-data repo
+    - uses: actions/checkout@v3
+      with:
+        repository: 'medic/build-history-data'
+        path: 'build-history-data'
     - name: Append file size
-      run: echo "`date +%s`,`stat -c "%s" ./build-history/index.html`" >> ./build-history/data/build-history/filesize.csv
+      run: echo "`date +%s`,`stat -c "%s" ./build-history/index.html`" >> ./build-history-data/build-history/filesize.csv
     - name: Commit & Push build history
       uses: actions-js/push@master
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        directory: 'build-history'
+        directory: 'build-history-data'
