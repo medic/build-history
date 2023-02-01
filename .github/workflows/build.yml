@@ -17,11 +17,15 @@ jobs:
       with:
         repository: 'medic/build-history'
         path: 'build-history'
+        token: ${{ secrets.BUILD_HISTORY_DATA_PUSH_TOKEN }}
+        persist-credentials: false
     # checkout build-history-data repo
     - uses: actions/checkout@v3
       with:
         repository: 'medic/build-history-data'
         path: 'build-history-data'
+        token: ${{ secrets.BUILD_HISTORY_DATA_PUSH_TOKEN }}
+        persist-credentials: false
     - name: Append file size
       run: echo "`date +%s`,`stat -c "%s" ./build-history/index.html`" >> ./build-history-data/build-history/filesize.csv
     - name: Commit & Push build history
