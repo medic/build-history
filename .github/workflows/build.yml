@@ -9,10 +9,10 @@ jobs:
   build:
     name: Append build history
     runs-on: ubuntu-22.04
+    env:
+      BUILD_DATA_TOKEN: ${{ secrets.BUILD_HISTORY_DATA_PUSH_TOKEN }}
 
     steps:
-      env:
-        BUILD_DATA_TOKEN: ${{ secrets.BUILD_HISTORY_DATA_PUSH_TOKEN }}
 
     # checkout build-history repo
     - uses: actions/checkout@v3
