@@ -19,7 +19,7 @@ const formatRow = row => {
   }
 };
 
-d3.csv('https://raw.githubusercontent.com/medic/build-history/main/data/build-history/filesize.csv', formatRow)
+d3.csv('https://raw.githubusercontent.com/medic/build-history-data/main/build-history/filesize.csv', formatRow)
   .then(data => {
     var x = d3.scaleTime()
       .domain(d3.extent(data, function(d) { return d.date; }))
