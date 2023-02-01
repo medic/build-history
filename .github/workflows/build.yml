@@ -5,9 +5,6 @@ on:
     branches:
       - main
 
-env:
-  PUSH_TOKEN: ${{ secrets.BUILD_HISTORY_DATA_PUSH_TOKEN }}
-
 jobs:
   build:
     name: Append build history
@@ -28,4 +25,8 @@ jobs:
     - name: Append file size
       run: echo "`date +%s`,`stat -c "%s" ./build-history/index.html`" >> ./build-history-data/build-history/filesize.csv
     - name: Commit & Push build history
-      run: cd build-history-data && git add . && git push https://$PUSH_TOKEN@github.com/medic/build-history-data.git
+      uses: actions-js/push@master
+      with:
+        github_token: ${{ secrets.BUILD_HISTORY_DATA_PUSH_TOKEN }}
+        directory: 'build-history-data'
+        repository: 'medic/build-history-data'
