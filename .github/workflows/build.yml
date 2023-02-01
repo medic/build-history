@@ -9,8 +9,6 @@ jobs:
   build:
     name: Append build history
     runs-on: ubuntu-22.04
-    env:
-      BUILD_DATA_TOKEN: ${{ secrets.BUILD_HISTORY_DATA_PUSH_TOKEN }}
 
     steps:
 
@@ -29,6 +27,6 @@ jobs:
     - name: Commit & Push build history
       uses: actions-js/push@master
       with:
-        github_token: ${{ env.BUILD_DATA_TOKEN }}
+        github_token: ${{ secrets.BUILD_HISTORY_DATA_PUSH_TOKEN }}
         directory: 'build-history-data'
         repository: 'medic/build-history-data'
