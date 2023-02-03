@@ -1,4 +1,4 @@
 "Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
-"broken","Fri Feb 03 01:35:24 UTC 2023","Fri Feb 03 01:35:24 UTC 2023","20","","Bulk delete reports","","Bulk delete reports","""before all"" hook for Bulk delete reports","""before all"" hook for Bulk delete reports",""
-"broken","Fri Feb 03 01:35:21 UTC 2023","Fri Feb 03 01:35:21 UTC 2023","21","","Delete Contacts","","Delete Contacts","""before each"" hook for Delete Contacts","""before each"" hook for Delete Contacts",""
-"broken","Fri Feb 03 01:35:27 UTC 2023","Fri Feb 03 01:35:27 UTC 2023","20","","Delete Reports","","Delete Reports","""before each"" hook for Delete Reports","""before each"" hook for Delete Reports",""
+"broken","Fri Feb 03 01:58:19 UTC 2023","Fri Feb 03 01:58:19 UTC 2023","23","","Delete Contacts","","Delete Contacts","""before each"" hook for Delete Contacts","""before each"" hook for Delete Contacts",""
+"broken","Fri Feb 03 01:58:22 UTC 2023","Fri Feb 03 01:58:22 UTC 2023","24","","Bulk delete reports","","Bulk delete reports","""before all"" hook for Bulk delete reports","""before all"" hook for Bulk delete reports",""
+"broken","Fri Feb 03 01:58:25 UTC 2023","Fri Feb 03 01:58:25 UTC 2023","21","","Delete Reports","","Delete Reports","""before each"" hook for Delete Reports","""before each"" hook for Delete Reports",""
