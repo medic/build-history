@@ -1,4 +1,5 @@
 "Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
-"broken","Fri Feb 03 01:58:19 UTC 2023","Fri Feb 03 01:58:19 UTC 2023","23","","Delete Contacts","","Delete Contacts","""before each"" hook for Delete Contacts","""before each"" hook for Delete Contacts",""
-"broken","Fri Feb 03 01:58:22 UTC 2023","Fri Feb 03 01:58:22 UTC 2023","24","","Bulk delete reports","","Bulk delete reports","""before all"" hook for Bulk delete reports","""before all"" hook for Bulk delete reports",""
-"broken","Fri Feb 03 01:58:25 UTC 2023","Fri Feb 03 01:58:25 UTC 2023","21","","Delete Reports","","Delete Reports","""before each"" hook for Delete Reports","""before each"" hook for Delete Reports",""
+"passed","Fri Feb 03 02:23:08 UTC 2023","Fri Feb 03 02:23:10 UTC 2023","1557","","Bulk delete reports","","Bulk delete reports","should open a selected report and a no selected report","should open a selected report and a no selected report",""
+"passed","Fri Feb 03 02:22:43 UTC 2023","Fri Feb 03 02:23:08 UTC 2023","25689","","Bulk delete reports","","Bulk delete reports","should select, deselect and delete only selected reports","should select, deselect and delete only selected reports",""
+"passed","Fri Feb 03 02:22:28 UTC 2023","Fri Feb 03 02:22:37 UTC 2023","8814","","Delete Contacts","","Delete Contacts","Should delete contact","Should delete contact",""
+"passed","Fri Feb 03 02:23:16 UTC 2023","Fri Feb 03 02:23:23 UTC 2023","6958","","Delete Reports","","Delete Reports","Should delete report","Should delete report",""
